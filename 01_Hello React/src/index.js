@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 
 //App component
 const App = function(){
-  return <div>Hello React!</div>;
+  return   <button style={{backgroundColor: 'blue', color:'white'}}>Submit</button>;
 }
 
 ReactDOM.render(<App/>,document.getElementById('root'));
