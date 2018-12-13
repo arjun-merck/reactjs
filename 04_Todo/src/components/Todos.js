@@ -3,7 +3,9 @@ import Todo from './Todo';
 
 class Todos extends React.Component {
   state = {
-    todos: ['One', 'Two']
+    todos: [
+      { id: 1, label: 'One' },
+      { id: 2, label: 'Two' }]
   };
 
   componentDidMount() {
@@ -21,10 +23,10 @@ class Todos extends React.Component {
   render() {
     const todos = this.state.todos.map(
       (todo) => {
-        return <Todo todo={todo} />
+        return <Todo key={todo.id} todo={todo} />
       }
     );
-    
+
     return (
       <ul>
         {todos}
